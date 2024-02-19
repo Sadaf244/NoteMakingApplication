@@ -44,16 +44,15 @@ class NoteShare(models.Model):
 
     @staticmethod
     def check_and_create_shared_user(users, note_object):
-        objs = []
         try:
             for user in users:
-                is_exists = NoteShare.objects.filter(shared_user=user, note=note_object).exists()
+                user_object = User.get_user_object(user)
+                is_exists = NoteShare.objects.filter(shared_user=user_object, note=note_object).exists()
                 if not is_exists:
-                    obj = NoteShare.objects.create(shared_user=user, note=note_object)
-                    objs.append(obj)
+                    NoteShare.objects.create(shared_user=user_object, note=note_object)
         except Exception as e:
             logging.error('getting exception on check_and_create_shared_user', repr(e))
-        return objs
+        return True
 
 
 class CreateNoteManager:

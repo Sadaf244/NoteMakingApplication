@@ -97,7 +97,16 @@ DATABASES = {
         'PORT': '35839',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'noteapp',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin1234',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
