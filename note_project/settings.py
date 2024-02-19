@@ -90,11 +90,11 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'noteapp',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'admin1234',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'BBEBGd-gg43-FDcBGF5gFCBA6gce41*e',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '35839',
     }
 }
 
